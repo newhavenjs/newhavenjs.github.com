@@ -32,6 +32,7 @@ title: newhaven.rb
 {% endfor %}
 
 <div id='events'>
+  <h1>Events</h1>
 </div>
 
 <p class="more"><a href="http://twitter.com/newhavenjs">More updates...</a></p>
@@ -41,34 +42,34 @@ title: newhaven.rb
   <script src="http://widgets.twimg.com/j/2/widget.js"></script>
   <script>
     new TWTR.Widget({
-    version: 2,
-    type: 'list',
-    rpp: 30,
-    interval: 6000,
-    title: 'newhaven.js',
-    subject: 'our peeps',
-    width: 'auto',
-    height: 300,
-    theme: {
-    shell: {
-    background: '#e0e0e0',
-    color: '#450000'
-    },
-    tweets: {
-    background: '#f7f7f7',
-    color: '#210000',
-    links: '#cc0000'
-    }
-    },
-    features: {
-    scrollbar: true,
-    loop: false,
-    live: true,
-    hashtags: true,
-    timestamp: true,
-    avatars: true,
-    behavior: 'all'
-    }
+      version: 2,
+      type: 'list',
+      rpp: 30,
+      interval: 6000,
+      title: 'newhaven.js',
+      subject: 'our peeps',
+      width: 'auto',
+      height: 300,
+      theme: {
+        shell: {
+          background: '#e0e0e0',
+          color: '#450000'
+        },
+        tweets: {
+          background: '#f7f7f7',
+          color: '#210000',
+          links: '#cc0000'
+        }
+      },
+      features: {
+        scrollbar: true,
+        loop: false,
+        live: true,
+        hashtags: true,
+        timestamp: true,
+        avatars: true,
+        behavior: 'all'
+      }
     }).render().setList('newhavenjs', 'community').start();
   </script>
 
