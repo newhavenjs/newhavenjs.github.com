@@ -13,6 +13,7 @@
   };
 
   $(document).ready( function () {
+    /*
     $.jGFeed('http://groups.google.com/group/newhavenjs/feed/atom_v1_0_msgs.xml',
              function (feeds) {
                if (!feeds) {
@@ -24,7 +25,7 @@
                });
              }, 6);
 
-    $.jGFeed('http://twitter.com/statuses/user_timeline/18841573.rss',
+    $.jGFeed('http://twitter.com/statuses/user_timeline/1308884917.rss', // XXX: Broken
              function (feeds) {
                if (!feeds) {
                  return false;
@@ -34,6 +35,7 @@
                  $('#events').append(Mustache.to_html(nhvsite.templates.tweet(), feed).replace(/newhavenjs:\s/, '')).linkify();
                });
              }, 5);
+    */
 
     // HA!
     $(window).konami( function () {
