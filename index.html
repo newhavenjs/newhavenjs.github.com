@@ -3,7 +3,7 @@ layout: default
 title: NewHaven.JS
 ---
 <div id="about">
-  <p>
+  <p class="lead">
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
     eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
     ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -22,84 +22,94 @@ title: NewHaven.JS
   </p>
 </div>
 
-<h1>Updates</h1>
+<div class="row-fluid">
+  <div id="updates" class="span6">
+    <h1>Updates</h1>
+    {% for post in site.posts limit 5 %}
+        {{ post.date | date: "%B %e, %Y" }}
+        <a href="{{ post.url }}">{{ post.title }}</a>
+    {% endfor %}
 
-{% for post in site.posts limit 5 %}
+    <small class="pull-right"><a href="/achives.html">More updates...</a></small>
+  </div>
 
-    {{ post.date | date: "%B %e, %Y" }}
-    <a href="{{ post.url }}">{{ post.title }}</a>
+  <div id="events" class="span6">
+    <h1>Events</h1>
+    <div id="events-content"></div>
 
-{% endfor %}
-
-<div id='events'>
-  <h1>Events</h1>
+    <small class="pull-right"><a href="http://twitter.com/newhavenjs">More updates...</a></small>
+  </div>
 </div>
 
-<p class="more"><a href="http://twitter.com/newhavenjs">More updates...</a></p>
-
-<div id="people">
-  <h1>People</h1>
-  <script src="http://widgets.twimg.com/j/2/widget.js"></script>
-  <script>
-    /*
-    new TWTR.Widget({
-      version: 2,
-      type: 'list',
-      rpp: 30,
-      interval: 6000,
-      title: 'newhaven.js',
-      subject: 'our peeps',
-      width: 'auto',
-      height: 300,
-      theme: {
-        shell: {
-          background: '#e0e0e0',
-          color: '#450000'
+<div class="row-fluid">
+  <div id="people" class="span6">
+    <h1>People</h1>
+    <script src="http://widgets.twimg.com/j/2/widget.js"></script>
+    <script>
+      /*
+      new TWTR.Widget({
+        version: 2,
+        type: 'list',
+        rpp: 30,
+        interval: 6000,
+        title: 'newhaven.js',
+        subject: 'our peeps',
+        width: 'auto',
+        height: 300,
+        theme: {
+          shell: {
+            background: '#e0e0e0',
+            color: '#450000'
+          },
+          tweets: {
+            background: '#f7f7f7',
+            color: '#210000',
+            links: '#cc0000'
+          }
         },
-        tweets: {
-          background: '#f7f7f7',
-          color: '#210000',
-          links: '#cc0000'
+        features: {
+          scrollbar: true,
+          loop: false,
+          live: true,
+          hashtags: true,
+          timestamp: true,
+          avatars: true,
+          behavior: 'all'
         }
-      },
-      features: {
-        scrollbar: true,
-        loop: false,
-        live: true,
-        hashtags: true,
-        timestamp: true,
-        avatars: true,
-        behavior: 'all'
-      }
-    }).render().setList('newhavenjs', 'community').start();
-    */
-  </script>
+      }).render().setList('newhavenjs', 'community').start();
+      */
+    </script>
 
-  <p class="more"><a href="http://twitter.com/newhavenjs/community">More conversation...</a></p>
+    <small class="pull-right"><a href="http://twitter.com/newhavenjs/community">More conversation...</a></small>
+  </div>
+
+  <div id="google-groups" class="span6">
+    <h1>Google Group</h1>
+    <div id="google-groups-posts"></div>
+
+    <small class="pull-right"><a href="http://groups.google.com/group/newhavenjs">More posts...</a></small>
+  </div>
 </div>
 
-<div id="google-groups">
-  <h1>Google Group</h1>
-  <div id="google-groups-posts"></div>
-
-  <p class="more"><a href="http://groups.google.com/group/newhavenjs">More posts...</a></p>
+<div class="row-fluid">
+  <div id="history" class="span12">
+    <h1>History</h1>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+      eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+      ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+      aliquip ex ea commodo consequat. Duis aute irure dolor in
+      reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+      pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+      culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+  </div>
 </div>
 
-<div id="history">
-  <h1>History</h1>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-    ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-    aliquip ex ea commodo consequat. Duis aute irure dolor in
-    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-    culpa qui officia deserunt mollit anim id est laborum.
-  </p>
-</div>
-
-<div id="projects">
-  <h1>Projects</h1>
-  <ul>
-  </ul>
+<div class="row-fluid">
+  <div id="projects" class="span12">
+    <h1>Projects</h1>
+    <ul>
+    </ul>
+  </div>
 </div>
