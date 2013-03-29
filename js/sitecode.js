@@ -12,7 +12,7 @@
     return '<div class="event">{{title}}<div class="pubdate"><a href="{{link}}">{{publishedDate}}</a></div></div>';
   };
 
-  $(document).ready( function () {
+  $(function () {
     /*
     $.jGFeed('http://groups.google.com/group/newhavenjs/feed/atom_v1_0_msgs.xml',
              function (feeds) {
@@ -38,13 +38,6 @@
     */
 
     // HA!
-    $(window).konami( function () {
-      var markup = '<div class="konami"><p>JavaScript</p>';
-      markup += '<p class="secret"><code>levels.push( new Level({bonus: "konami"}) );</code></p>';
-      markup += '</div>'
-      $("#page").fadeOut();
-      $("body").append(markup);
-      setTimeout(function () { $(".konami").fadeIn(); }, 1500);
-    });
+    $.konami(function () { $("#easteregg").modal("show"); });
   });
 })(jQuery);
